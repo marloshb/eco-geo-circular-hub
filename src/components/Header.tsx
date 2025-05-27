@@ -11,7 +11,7 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
-import { Brain, Building2, Users, Recycle, MapPin, Award, GraduationCap, Truck, Shield, Zap } from 'lucide-react';
+import { Brain, Building2, Users, Recycle, MapPin, Award, GraduationCap, Truck, Shield, Zap, Factory, Wheat, Store } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -170,6 +170,118 @@ const Header = () => {
                             </p>
                           </Link>
                         </NavigationMenuLink>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/educacao-capacitacao"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-50 hover:text-green-700 focus:bg-green-50 focus:text-green-700"
+                          >
+                            <div className="flex items-center space-x-2 mb-1">
+                              <GraduationCap className="h-4 w-4 text-green-600" />
+                              <div className="text-sm font-medium">Educação</div>
+                            </div>
+                            <p className="line-clamp-2 text-sm text-muted-foreground">
+                              Capacitação e treinamento
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/monitoramento-conformidade"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 hover:text-blue-700 focus:bg-blue-50 focus:text-blue-700"
+                          >
+                            <div className="flex items-center space-x-2 mb-1">
+                              <Shield className="h-4 w-4 text-blue-600" />
+                              <div className="text-sm font-medium">Conformidade</div>
+                            </div>
+                            <p className="line-clamp-2 text-sm text-muted-foreground">
+                              Monitoramento e auditoria
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                {/* Setores */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-colors">
+                    <Factory className="h-4 w-4 mr-2" />
+                    Setores
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid gap-3 p-6 w-[500px] lg:w-[600px]">
+                      <div className="grid grid-cols-2 gap-3">
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/solucoes-manufatura"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 hover:text-blue-700 focus:bg-blue-50 focus:text-blue-700"
+                          >
+                            <div className="flex items-center space-x-2 mb-1">
+                              <Factory className="h-4 w-4 text-blue-600" />
+                              <div className="text-sm font-medium">Manufatura e Indústria</div>
+                            </div>
+                            <p className="line-clamp-2 text-sm text-muted-foreground">
+                              Design circular e gestão industrial
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/solucoes-agricultura"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-50 hover:text-green-700 focus:bg-green-50 focus:text-green-700"
+                          >
+                            <div className="flex items-center space-x-2 mb-1">
+                              <Wheat className="h-4 w-4 text-green-600" />
+                              <div className="text-sm font-medium">Agricultura e Alimentos</div>
+                            </div>
+                            <p className="line-clamp-2 text-sm text-muted-foreground">
+                              Gestão de resíduos orgânicos
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/solucoes-construcao"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-orange-50 hover:text-orange-700 focus:bg-orange-50 focus:text-orange-700"
+                          >
+                            <div className="flex items-center space-x-2 mb-1">
+                              <Building2 className="h-4 w-4 text-orange-600" />
+                              <div className="text-sm font-medium">Construção Civil</div>
+                            </div>
+                            <p className="line-clamp-2 text-sm text-muted-foreground">
+                              Materiais sustentáveis e RCD
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/solucoes-varejo"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-50 hover:text-purple-700 focus:bg-purple-50 focus:text-purple-700"
+                          >
+                            <div className="flex items-center space-x-2 mb-1">
+                              <Store className="h-4 w-4 text-purple-600" />
+                              <div className="text-sm font-medium">Varejo e Consumo</div>
+                            </div>
+                            <p className="line-clamp-2 text-sm text-muted-foreground">
+                              Logística reversa e marketplace
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/solucoes-energia"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-yellow-50 hover:text-yellow-700 focus:bg-yellow-50 focus:text-yellow-700"
+                          >
+                            <div className="flex items-center space-x-2 mb-1">
+                              <Zap className="h-4 w-4 text-yellow-600" />
+                              <div className="text-sm font-medium">Energia e Utilities</div>
+                            </div>
+                            <p className="line-clamp-2 text-sm text-muted-foreground">
+                              Waste-to-energy e eficiência
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
                       </div>
                     </div>
                   </NavigationMenuContent>
@@ -186,19 +298,6 @@ const Header = () => {
                       <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold">
                         Agente IA
                       </span>
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                {/* Educação */}
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      to="/educacao-capacitacao"
-                      className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-green-50 hover:text-green-700 focus:bg-green-50 focus:text-green-700 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                    >
-                      <GraduationCap className="h-4 w-4 mr-2" />
-                      Educação
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
