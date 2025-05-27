@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import GeotecnologiasAvancadas from "./pages/GeotecnologiasAvancadas";
 import EducacaoCapacitacao from "./pages/EducacaoCapacitacao";
 import SolucoesManufatura from "./pages/SolucoesManufatura";
+import SolucoesAgricultura from "./pages/SolucoesAgricultura";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/geotecnologias-avancadas" element={<GeotecnologiasAvancadas />} />
           <Route path="/educacao-capacitacao" element={<EducacaoCapacitacao />} />
           <Route path="/solucoes-manufatura" element={<SolucoesManufatura />} />
+          <Route path="/solucoes-agricultura" element={<SolucoesAgricultura />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

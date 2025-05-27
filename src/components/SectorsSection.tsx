@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { Factory, Wheat, Building2, Store, Zap, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Link } from 'react-router-dom';
 
 const SectorsSection = () => {
   const sectors = [
@@ -13,7 +13,8 @@ const SectorsSection = () => {
       description: 'Design circular, passaportes digitais e gestão de materiais reciclados.',
       features: ['Ecodesign', 'Rastreabilidade', 'Certificações'],
       compliance: 'PNRS + ISO 59000',
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-blue-500 to-blue-600',
+      link: '/solucoes-manufatura'
     },
     {
       icon: Wheat,
@@ -21,7 +22,8 @@ const SectorsSection = () => {
       description: 'Gestão de resíduos orgânicos, compostagem e agricultura de precisão.',
       features: ['Compostagem', 'Bioenergia', 'Agricultura 4.0'],
       compliance: 'PNRS + Anvisa',
-      color: 'from-green-500 to-green-600'
+      color: 'from-green-500 to-green-600',
+      link: '/solucoes-agricultura'
     },
     {
       icon: Building2,
@@ -29,7 +31,8 @@ const SectorsSection = () => {
       description: 'Materiais reciclados, construção sustentável e gestão de resíduos.',
       features: ['Materiais reciclados', 'Construção verde', 'Demolição seletiva'],
       compliance: 'PNRS + ABNT',
-      color: 'from-orange-500 to-orange-600'
+      color: 'from-orange-500 to-orange-600',
+      link: '#'
     },
     {
       icon: Store,
@@ -37,7 +40,8 @@ const SectorsSection = () => {
       description: 'Logística reversa, economia de compartilhamento e educação do consumidor.',
       features: ['Logística reversa', 'Marketplace', 'Educação'],
       compliance: 'PNRS + CDC',
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-purple-500 to-purple-600',
+      link: '#'
     },
     {
       icon: Zap,
@@ -45,7 +49,8 @@ const SectorsSection = () => {
       description: 'Waste-to-energy, energias renováveis e otimização de recursos.',
       features: ['Waste-to-energy', 'Smart grids', 'Eficiência'],
       compliance: 'PNRS + ANEEL',
-      color: 'from-yellow-500 to-yellow-600'
+      color: 'from-yellow-500 to-yellow-600',
+      link: '#'
     }
   ];
 
@@ -86,10 +91,19 @@ const SectorsSection = () => {
                     </div>
                   ))}
                 </div>
-                <Button variant="outline" className="w-full group-hover:bg-green-50 group-hover:border-green-300">
-                  Explorar Setor
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                {sector.link !== '#' ? (
+                  <Link to={sector.link}>
+                    <Button variant="outline" className="w-full group-hover:bg-green-50 group-hover:border-green-300">
+                      Explorar Setor
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button variant="outline" className="w-full group-hover:bg-green-50 group-hover:border-green-300">
+                    Explorar Setor
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
@@ -119,10 +133,19 @@ const SectorsSection = () => {
                     </div>
                   ))}
                 </div>
-                <Button variant="outline" className="w-full group-hover:bg-green-50 group-hover:border-green-300">
-                  Explorar Setor
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                {sector.link !== '#' ? (
+                  <Link to={sector.link}>
+                    <Button variant="outline" className="w-full group-hover:bg-green-50 group-hover:border-green-300">
+                      Explorar Setor
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button variant="outline" className="w-full group-hover:bg-green-50 group-hover:border-green-300">
+                    Explorar Setor
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
