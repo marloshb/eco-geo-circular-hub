@@ -197,7 +197,7 @@ const GamificacaoRankings = () => {
                       </div>
                       <h4 className="font-medium text-xs">{distintivo.nome}</h4>
                       <p className="text-xs text-gray-600 mt-1">{distintivo.descricao}</p>
-                      {distinctivo.conquistado && (
+                      {distintivo.conquistado && (
                         <Badge className="bg-green-600 text-xs mt-2">
                           Conquistado
                         </Badge>
