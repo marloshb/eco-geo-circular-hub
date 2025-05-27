@@ -9,6 +9,7 @@ import Registro from "./pages/Registro";
 import GestaoVidaUtil from "./pages/GestaoVidaUtil";
 import PortalCatadores from "./pages/PortalCatadores";
 import MonitoramentoConformidade from "./pages/MonitoramentoConformidade";
+import MarketplaceResiduos from "./pages/MarketplaceResiduos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/gestao-vida-util" element={<GestaoVidaUtil />} />
           <Route path="/portal-catadores" element={<PortalCatadores />} />
           <Route path="/monitoramento-conformidade" element={<MonitoramentoConformidade />} />
+          <Route path="/marketplace-residuos" element={<MarketplaceResiduos />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

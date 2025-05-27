@@ -41,6 +41,9 @@ const Header = () => {
             <Link to="/portal-catadores" className="text-gray-700 hover:text-green-600 transition-colors">
               Portal Catadores
             </Link>
+            <Link to="/marketplace-residuos" className="text-gray-700 hover:text-green-600 transition-colors">
+              Marketplace
+            </Link>
             <Link to="/monitoramento-conformidade" className="text-gray-700 hover:text-green-600 transition-colors">
               Conformidade
             </Link>
@@ -83,6 +86,9 @@ const Header = () => {
               </Link>
               <Link to="/portal-catadores" className="text-gray-700 hover:text-green-600 transition-colors">
                 Portal Catadores
+              </Link>
+              <Link to="/marketplace-residuos" className="text-gray-700 hover:text-green-600 transition-colors">
+                Marketplace
               </Link>
               <Link to="/monitoramento-conformidade" className="text-gray-700 hover:text-green-600 transition-colors">
                 Conformidade
