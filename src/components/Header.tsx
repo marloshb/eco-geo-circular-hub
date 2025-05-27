@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +11,7 @@ const Header = () => {
     <header className="bg-white/90 backdrop-blur-sm border-b border-green-100 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="bg-gradient-to-r from-green-600 to-blue-600 p-2 rounded-lg">
               <Leaf className="h-6 w-6 text-white" />
             </div>
@@ -18,7 +19,7 @@ const Header = () => {
               <h1 className="text-xl font-bold text-gray-900">EcoCircular Brasil</h1>
               <p className="text-xs text-green-600 font-medium">Plataforma Nacional de Economia Circular</p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
@@ -34,9 +35,11 @@ const Header = () => {
             <a href="#mapa" className="text-gray-700 hover:text-green-600 transition-colors">
               Mapa
             </a>
-            <Button className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700">
-              Entrar na Plataforma
-            </Button>
+            <Link to="/registro">
+              <Button className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700">
+                Cadastrar-se
+              </Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -66,9 +69,11 @@ const Header = () => {
               <a href="#mapa" className="text-gray-700 hover:text-green-600 transition-colors">
                 Mapa
               </a>
-              <Button className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 w-full">
-                Entrar na Plataforma
-              </Button>
+              <Link to="/registro">
+                <Button className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 w-full">
+                  Cadastrar-se
+                </Button>
+              </Link>
             </nav>
           </div>
         )}
