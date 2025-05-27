@@ -44,6 +44,9 @@ const Header = () => {
             <Link to="/marketplace-residuos" className="text-gray-700 hover:text-green-600 transition-colors">
               Marketplace
             </Link>
+            <Link to="/logistica-otimizada" className="text-gray-700 hover:text-green-600 transition-colors">
+              Logística
+            </Link>
             <Link to="/monitoramento-conformidade" className="text-gray-700 hover:text-green-600 transition-colors">
               Conformidade
             </Link>
@@ -89,6 +92,9 @@ const Header = () => {
               </Link>
               <Link to="/marketplace-residuos" className="text-gray-700 hover:text-green-600 transition-colors">
                 Marketplace
+              </Link>
+              <Link to="/logistica-otimizada" className="text-gray-700 hover:text-green-600 transition-colors">
+                Logística
               </Link>
               <Link to="/monitoramento-conformidade" className="text-gray-700 hover:text-green-600 transition-colors">
                 Conformidade
