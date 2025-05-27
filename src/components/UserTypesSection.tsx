@@ -13,7 +13,8 @@ const UserTypesSection = () => {
       description: 'Interface simplificada, registro biométrico e pagamentos justos para trabalhadores da reciclagem.',
       features: ['Registro simplificado', 'Localização de materiais', 'Pagamentos justos', 'Capacitação'],
       color: 'bg-gradient-to-r from-green-500 to-green-600',
-      badge: 'Inclusão Social'
+      badge: 'Inclusão Social',
+      link: '/portal-catadores'
     },
     {
       icon: Building,
@@ -21,7 +22,8 @@ const UserTypesSection = () => {
       description: 'Ferramentas avançadas para gestão circular, compliance e otimização de recursos.',
       features: ['Dashboard executivo', 'Relatórios de compliance', 'Marketplace B2B', 'Analytics'],
       color: 'bg-gradient-to-r from-blue-500 to-blue-600',
-      badge: 'PNEC/ENEC'
+      badge: 'PNEC/ENEC',
+      link: '/portal-empresas'
     },
     {
       icon: ShoppingBag,
@@ -29,7 +31,8 @@ const UserTypesSection = () => {
       description: 'Localize pontos de reciclagem, marketplace de segunda mão e educação ambiental.',
       features: ['Pontos de coleta', 'Marketplace', 'Educação', 'Recompensas'],
       color: 'bg-gradient-to-r from-purple-500 to-purple-600',
-      badge: 'Engajamento'
+      badge: 'Engajamento',
+      link: '/registro'
     },
     {
       icon: MapPin,
@@ -37,7 +40,8 @@ const UserTypesSection = () => {
       description: 'Monitoramento de políticas, indicadores de sustentabilidade e gestão territorial.',
       features: ['Dashboards públicos', 'Indicadores PNEC', 'Monitoramento', 'Relatórios'],
       color: 'bg-gradient-to-r from-orange-500 to-orange-600',
-      badge: 'Governança'
+      badge: 'Governança',
+      link: '/monitoramento-conformidade'
     }
   ];
 
@@ -82,9 +86,11 @@ const UserTypesSection = () => {
                     </div>
                   ))}
                 </div>
-                <Button className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700">
-                  Acessar Portal
-                </Button>
+                <Link to={userType.link}>
+                  <Button className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700">
+                    Acessar Portal
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}

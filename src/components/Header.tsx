@@ -19,6 +19,9 @@ const Header = () => {
             <Link to="/registro" className="text-gray-700 hover:text-green-600 transition-colors">
               Registro
             </Link>
+            <Link to="/portal-empresas" className="text-gray-700 hover:text-green-600 transition-colors">
+              Portal Empresas
+            </Link>
             <Link to="/gestao-vida-util" className="text-gray-700 hover:text-green-600 transition-colors">
               Ciclo de Vida
             </Link>

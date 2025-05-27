@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Registro from "./pages/Registro";
 import GestaoVidaUtil from "./pages/GestaoVidaUtil";
 import PortalCatadores from "./pages/PortalCatadores";
+import PortalEmpresas from "./pages/PortalEmpresas";
 import MonitoramentoConformidade from "./pages/MonitoramentoConformidade";
 import MarketplaceResiduos from "./pages/MarketplaceResiduos";
 import LogisticaOtimizada from "./pages/LogisticaOtimizada";
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/registro" element={<Registro />} />
           <Route path="/gestao-vida-util" element={<GestaoVidaUtil />} />
           <Route path="/portal-catadores" element={<PortalCatadores />} />
+          <Route path="/portal-empresas" element={<PortalEmpresas />} />
           <Route path="/monitoramento-conformidade" element={<MonitoramentoConformidade />} />
           <Route path="/marketplace-residuos" element={<MarketplaceResiduos />} />
           <Route path="/logistica-otimizada" element={<LogisticaOtimizada />} />
