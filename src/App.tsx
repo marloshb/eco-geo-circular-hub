@@ -46,6 +46,7 @@ const App = () => (
           <Route path="/sistema-incentivos" element={<SistemaIncentivos />} />
           <Route path="/geotecnologias-avancadas" element={<GeotecnologiasAvancadas />} />
           <Route path="/educacao-capacitacao" element={<EducacaoCapacitacao />} />
+          <Route path="/agente-ia-transversal" element={<AgentIATransversal />} />
           <Route path="/solucoes-manufatura" element={<SolucoesManufatura />} />
           <Route path="/solucoes-agricultura" element={<SolucoesAgricultura />} />
           <Route path="/solucoes-energia" element={<SolucoesEnergia />} />
