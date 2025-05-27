@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -38,6 +39,9 @@ const Header = () => {
             </Link>
             <Link to="/geotecnologias-avancadas" className="text-gray-700 hover:text-green-600 transition-colors">
               Geotecnologias
+            </Link>
+            <Link to="/educacao-capacitacao" className="text-gray-700 hover:text-green-600 transition-colors">
+              Educação
             </Link>
           </nav>
           
