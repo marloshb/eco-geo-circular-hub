@@ -23,6 +23,7 @@ import SolucoesAgricultura from "./pages/SolucoesAgricultura";
 import SolucoesEnergia from "./pages/SolucoesEnergia";
 import SolucoesVarejo from "./pages/SolucoesVarejo";
 import SolucoesConstrucao from "./pages/SolucoesConstrucao";
+import AgentIATransversal from "./pages/AgentIATransversal";
 
 const queryClient = new QueryClient();
 
