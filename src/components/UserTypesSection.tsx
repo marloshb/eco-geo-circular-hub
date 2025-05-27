@@ -32,7 +32,7 @@ const UserTypesSection = () => {
       features: ['Pontos de coleta', 'Marketplace', 'Educação', 'Recompensas'],
       color: 'bg-gradient-to-r from-purple-500 to-purple-600',
       badge: 'Engajamento',
-      link: '/registro'
+      link: '/portal-consumidores'
     },
     {
       icon: MapPin,

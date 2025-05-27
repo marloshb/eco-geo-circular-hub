@@ -20,6 +20,7 @@ import SolucoesAgricultura from "./pages/SolucoesAgricultura";
 import SolucoesEnergia from "./pages/SolucoesEnergia";
 import SolucoesVarejo from "./pages/SolucoesVarejo";
 import SolucoesConstrucao from "./pages/SolucoesConstrucao";
+import PortalConsumidores from "./pages/PortalConsumidores";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/gestao-vida-util" element={<GestaoVidaUtil />} />
           <Route path="/portal-catadores" element={<PortalCatadores />} />
           <Route path="/portal-empresas" element={<PortalEmpresas />} />
+          <Route path="/portal-consumidores" element={<PortalConsumidores />} />
           <Route path="/monitoramento-conformidade" element={<MonitoramentoConformidade />} />
           <Route path="/marketplace-residuos" element={<MarketplaceResiduos />} />
           <Route path="/logistica-otimizada" element={<LogisticaOtimizada />} />
