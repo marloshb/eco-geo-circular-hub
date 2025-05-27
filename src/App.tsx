@@ -11,6 +11,7 @@ import PortalCatadores from "./pages/PortalCatadores";
 import MonitoramentoConformidade from "./pages/MonitoramentoConformidade";
 import MarketplaceResiduos from "./pages/MarketplaceResiduos";
 import LogisticaOtimizada from "./pages/LogisticaOtimizada";
+import SistemaIncentivos from "./pages/SistemaIncentivos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/monitoramento-conformidade" element={<MonitoramentoConformidade />} />
           <Route path="/marketplace-residuos" element={<MarketplaceResiduos />} />
           <Route path="/logistica-otimizada" element={<LogisticaOtimizada />} />
+          <Route path="/sistema-incentivos" element={<SistemaIncentivos />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

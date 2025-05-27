@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu, X, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -50,6 +49,9 @@ const Header = () => {
             <Link to="/monitoramento-conformidade" className="text-gray-700 hover:text-green-600 transition-colors">
               Conformidade
             </Link>
+            <Link to="/sistema-incentivos" className="text-gray-700 hover:text-green-600 transition-colors">
+              Incentivos
+            </Link>
             <Link to="/registro">
               <Button className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700">
                 Cadastrar-se
@@ -98,6 +100,9 @@ const Header = () => {
               </Link>
               <Link to="/monitoramento-conformidade" className="text-gray-700 hover:text-green-600 transition-colors">
                 Conformidade
+              </Link>
+              <Link to="/sistema-incentivos" className="text-gray-700 hover:text-green-600 transition-colors">
+                Incentivos
               </Link>
               <Link to="/registro">
                 <Button className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 w-full">
