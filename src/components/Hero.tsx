@@ -1,12 +1,14 @@
 
 import React, { useState } from 'react';
-import { ArrowRight, Map, Users, Package, Play } from 'lucide-react';
+import { ArrowRight, Map, Users, Package, Play, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Demo from './Demo';
+import SolicitarDemonstracao from './SolicitarDemonstracao';
 
 const Hero = () => {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
+  const [isSolicitarDemoOpen, setIsSolicitarDemoOpen] = useState(false);
 
   return (
     <>
@@ -45,6 +47,15 @@ const Hero = () => {
                 <Play className="mr-2 h-5 w-5" />
                 Ver Demonstração
               </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-blue-300 text-blue-700 hover:bg-blue-50 px-8 py-3 text-lg"
+                onClick={() => setIsSolicitarDemoOpen(true)}
+              >
+                <MessageSquare className="mr-2 h-5 w-5" />
+                Solicitar Demonstração
+              </Button>
             </div>
 
             {/* Key Features Preview */}
@@ -67,6 +78,7 @@ const Hero = () => {
       </section>
 
       <Demo isOpen={isDemoOpen} onClose={() => setIsDemoOpen(false)} />
+      <SolicitarDemonstracao isOpen={isSolicitarDemoOpen} onClose={() => setIsSolicitarDemoOpen(false)} />
     </>
   );
 };
