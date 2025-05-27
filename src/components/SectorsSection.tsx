@@ -41,7 +41,7 @@ const SectorsSection = () => {
       features: ['Logística reversa', 'Marketplace', 'Educação'],
       compliance: 'PNRS + CDC',
       color: 'from-purple-500 to-purple-600',
-      link: '#'
+      link: '/solucoes-varejo'
     },
     {
       icon: Zap,
