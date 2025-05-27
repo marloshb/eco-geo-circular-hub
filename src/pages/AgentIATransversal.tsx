@@ -11,9 +11,11 @@ import RelatoriosAutomatizados from '@/components/agente-ia/RelatoriosAutomatiza
 import RecomendacoesPersonalizadas from '@/components/agente-ia/RecomendacoesPersonalizadas';
 import PrevisaoTendencias from '@/components/agente-ia/PrevisaoTendencias';
 import FluxosAutomatizados from '@/components/agente-ia/FluxosAutomatizados';
+import DemoOtimizacaoIA from '@/components/agente-ia/DemoOtimizacaoIA';
 
 const AgentIATransversal = () => {
   const [activeTab, setActiveTab] = useState('analise');
+  const [isDemoOpen, setIsDemoOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -168,7 +170,12 @@ const AgentIATransversal = () => {
                   <Settings className="h-5 w-5 mr-2" />
                   Configurar IA
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-700">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-purple-700"
+                  onClick={() => setIsDemoOpen(true)}
+                >
                   <Target className="h-5 w-5 mr-2" />
                   Ver Demonstração
                 </Button>
@@ -177,6 +184,8 @@ const AgentIATransversal = () => {
           </div>
         </div>
       </div>
+
+      <DemoOtimizacaoIA isOpen={isDemoOpen} onClose={() => setIsDemoOpen(false)} />
     </div>
   );
 };
