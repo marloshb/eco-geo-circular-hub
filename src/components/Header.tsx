@@ -38,6 +38,9 @@ const Header = () => {
             <Link to="/gestao-vida-util" className="text-gray-700 hover:text-green-600 transition-colors">
               Ciclo de Vida
             </Link>
+            <Link to="/portal-catadores" className="text-gray-700 hover:text-green-600 transition-colors">
+              Portal Catadores
+            </Link>
             <Link to="/registro">
               <Button className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700">
                 Cadastrar-se
@@ -74,6 +77,9 @@ const Header = () => {
               </a>
               <Link to="/gestao-vida-util" className="text-gray-700 hover:text-green-600 transition-colors">
                 Ciclo de Vida
+              </Link>
+              <Link to="/portal-catadores" className="text-gray-700 hover:text-green-600 transition-colors">
+                Portal Catadores
               </Link>
               <Link to="/registro">
                 <Button className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 w-full">
