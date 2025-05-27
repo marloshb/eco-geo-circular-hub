@@ -50,7 +50,7 @@ const SectorsSection = () => {
       features: ['Waste-to-energy', 'Smart grids', 'Eficiência'],
       compliance: 'PNRS + ANEEL',
       color: 'from-yellow-500 to-yellow-600',
-      link: '#'
+      link: '/solucoes-energia'
     }
   ];
 

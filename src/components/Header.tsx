@@ -46,6 +46,9 @@ const Header = () => {
             <Link to="/solucoes-manufatura" className="text-gray-700 hover:text-green-600 transition-colors">
               Manufatura
             </Link>
+            <Link to="/solucoes-energia" className="text-gray-700 hover:text-green-600 transition-colors">
+              Energia
+            </Link>
           </nav>
           
           <Button className="bg-green-600 hover:bg-green-700 text-white">

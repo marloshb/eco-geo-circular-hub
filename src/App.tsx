@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,6 +17,7 @@ import GeotecnologiasAvancadas from "./pages/GeotecnologiasAvancadas";
 import EducacaoCapacitacao from "./pages/EducacaoCapacitacao";
 import SolucoesManufatura from "./pages/SolucoesManufatura";
 import SolucoesAgricultura from "./pages/SolucoesAgricultura";
+import SolucoesEnergia from "./pages/SolucoesEnergia";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +40,7 @@ const App = () => (
           <Route path="/educacao-capacitacao" element={<EducacaoCapacitacao />} />
           <Route path="/solucoes-manufatura" element={<SolucoesManufatura />} />
           <Route path="/solucoes-agricultura" element={<SolucoesAgricultura />} />
+          <Route path="/solucoes-energia" element={<SolucoesEnergia />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
