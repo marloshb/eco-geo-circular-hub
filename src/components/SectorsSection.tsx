@@ -32,7 +32,7 @@ const SectorsSection = () => {
       features: ['Materiais reciclados', 'Construção verde', 'Demolição seletiva'],
       compliance: 'PNRS + ABNT',
       color: 'from-orange-500 to-orange-600',
-      link: '#'
+      link: '/solucoes-construcao'
     },
     {
       icon: Store,

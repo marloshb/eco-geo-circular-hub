@@ -18,6 +18,7 @@ import SolucoesManufatura from "./pages/SolucoesManufatura";
 import SolucoesAgricultura from "./pages/SolucoesAgricultura";
 import SolucoesEnergia from "./pages/SolucoesEnergia";
 import SolucoesVarejo from "./pages/SolucoesVarejo";
+import SolucoesConstrucao from "./pages/SolucoesConstrucao";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/solucoes-agricultura" element={<SolucoesAgricultura />} />
           <Route path="/solucoes-energia" element={<SolucoesEnergia />} />
           <Route path="/solucoes-varejo" element={<SolucoesVarejo />} />
+          <Route path="/solucoes-construcao" element={<SolucoesConstrucao />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
