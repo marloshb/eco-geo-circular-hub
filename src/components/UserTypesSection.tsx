@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Building, ShoppingBag, MapPin } from 'lucide-react';
@@ -41,7 +42,7 @@ const UserTypesSection = () => {
       features: ['Dashboards públicos', 'Indicadores PNEC', 'Monitoramento', 'Relatórios'],
       color: 'bg-gradient-to-r from-orange-500 to-orange-600',
       badge: 'Governança',
-      link: '/monitoramento-conformidade'
+      link: '/portal-orgaos-publicos'
     }
   ];
 

@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -8,6 +9,8 @@ import Registro from "./pages/Registro";
 import GestaoVidaUtil from "./pages/GestaoVidaUtil";
 import PortalCatadores from "./pages/PortalCatadores";
 import PortalEmpresas from "./pages/PortalEmpresas";
+import PortalConsumidores from "./pages/PortalConsumidores";
+import PortalOrgaosPublicos from "./pages/PortalOrgaosPublicos";
 import MonitoramentoConformidade from "./pages/MonitoramentoConformidade";
 import MarketplaceResiduos from "./pages/MarketplaceResiduos";
 import LogisticaOtimizada from "./pages/LogisticaOtimizada";
@@ -20,7 +23,6 @@ import SolucoesAgricultura from "./pages/SolucoesAgricultura";
 import SolucoesEnergia from "./pages/SolucoesEnergia";
 import SolucoesVarejo from "./pages/SolucoesVarejo";
 import SolucoesConstrucao from "./pages/SolucoesConstrucao";
-import PortalConsumidores from "./pages/PortalConsumidores";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +39,7 @@ const App = () => (
           <Route path="/portal-catadores" element={<PortalCatadores />} />
           <Route path="/portal-empresas" element={<PortalEmpresas />} />
           <Route path="/portal-consumidores" element={<PortalConsumidores />} />
+          <Route path="/portal-orgaos-publicos" element={<PortalOrgaosPublicos />} />
           <Route path="/monitoramento-conformidade" element={<MonitoramentoConformidade />} />
           <Route path="/marketplace-residuos" element={<MarketplaceResiduos />} />
           <Route path="/logistica-otimizada" element={<LogisticaOtimizada />} />
