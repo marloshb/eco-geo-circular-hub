@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Play, Clock, Users, CheckCircle, BookOpen, Video, FileText, Quiz } from 'lucide-react';
+import { Play, Clock, Users, CheckCircle, BookOpen, Video, FileText, HelpCircle } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -53,7 +52,7 @@ const TutoriaisInterativos = () => {
       participants: 789,
       progress: 78,
       difficulty: 'Básico',
-      icon: Quiz,
+      icon: HelpCircle,
       topics: ['Reduzir, reutilizar, reciclar', 'Compras sustentáveis', 'Descarte correto']
     },
     {
@@ -105,7 +104,7 @@ const TutoriaisInterativos = () => {
     switch (type) {
       case 'video': return Video;
       case 'interactive': return BookOpen;
-      case 'quiz': return Quiz;
+      case 'quiz': return HelpCircle;
       default: return FileText;
     }
   };
@@ -254,7 +253,7 @@ const TutoriaisInterativos = () => {
           <div className="bg-white rounded-lg p-4 shadow-sm">
             <div className="flex items-center space-x-3 mb-3">
               <div className="p-2 bg-purple-100 rounded-lg">
-                <Quiz className="h-5 w-5 text-purple-600" />
+                <HelpCircle className="h-5 w-5 text-purple-600" />
               </div>
               <h4 className="font-medium text-gray-900">Quiz Interativo</h4>
             </div>
