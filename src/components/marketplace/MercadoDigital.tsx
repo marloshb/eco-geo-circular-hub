@@ -1,13 +1,19 @@
-
 import React, { useState } from 'react';
 import { Store, ShoppingCart, Gavel, FileText, Handshake, CreditCard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import CriarLeilaoModal from './CriarLeilaoModal';
+import FazerLanceModal from './FazerLanceModal';
+import ProporTrocaModal from './ProporTrocaModal';
 
 const MercadoDigital = () => {
   const [activeMarketTab, setActiveMarketTab] = useState('compra-venda');
+  const [criarLeilaoModal, setCriarLeilaoModal] = useState(false);
+  const [fazerLanceModal, setFazerLanceModal] = useState(false);
+  const [trocarModal, setTrocarModal] = useState(false);
+  const [leilaoSelecionado, setLeilaoSelecionado] = useState(null);
 
   const transacoesRecentes = [
     {
@@ -88,6 +94,11 @@ const MercadoDigital = () => {
       status: 'Pendente'
     }
   ];
+
+  const fazerLance = (leilao: any) => {
+    setLeilaoSelecionado(leilao);
+    setFazerLanceModal(true);
+  };
 
   return (
     <div className="space-y-6">
@@ -203,7 +214,10 @@ const MercadoDigital = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-semibold">Leilões Ativos</h3>
-                  <Button className="bg-orange-600 hover:bg-orange-700">
+                  <Button 
+                    className="bg-orange-600 hover:bg-orange-700"
+                    onClick={() => setCriarLeilaoModal(true)}
+                  >
                     <Gavel className="h-4 w-4 mr-2" />
                     Criar Leilão
                   </Button>
@@ -240,7 +254,10 @@ const MercadoDigital = () => {
                             </div>
                           </div>
                           
-                          <Button className="w-full bg-orange-600 hover:bg-orange-700">
+                          <Button 
+                            className="w-full bg-orange-600 hover:bg-orange-700"
+                            onClick={() => fazerLance(leilao)}
+                          >
                             Fazer Lance
                           </Button>
                         </div>
@@ -260,51 +277,61 @@ const MercadoDigital = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <div className="space-y-4">
-                      <h4 className="font-medium">Ofertas de Troca</h4>
-                      <div className="space-y-3">
-                        <div className="border rounded-lg p-4">
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="font-medium">2 ton de Papel</span>
-                            <Badge variant="outline">Troca Direta</Badge>
+                  <div className="space-y-4">
+                    <Button 
+                      className="bg-blue-600 hover:bg-blue-700"
+                      onClick={() => setTrocarModal(true)}
+                    >
+                      <Handshake className="h-4 w-4 mr-2" />
+                      Propor Nova Troca
+                    </Button>
+                    
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                      <div className="space-y-4">
+                        <h4 className="font-medium">Ofertas de Troca</h4>
+                        <div className="space-y-3">
+                          <div className="border rounded-lg p-4">
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="font-medium">2 ton de Papel</span>
+                              <Badge variant="outline">Troca Direta</Badge>
+                            </div>
+                            <p className="text-sm text-gray-600 mb-2">Por: 1.5 ton de Plástico PET</p>
+                            <p className="text-xs text-gray-500">Gráfica ABC - São Paulo, SP</p>
+                            <Button size="sm" className="mt-2 w-full">
+                              Propor Troca
+                            </Button>
                           </div>
-                          <p className="text-sm text-gray-600 mb-2">Por: 1.5 ton de Plástico PET</p>
-                          <p className="text-xs text-gray-500">Gráfica ABC - São Paulo, SP</p>
-                          <Button size="sm" className="mt-2 w-full">
-                            Propor Troca
-                          </Button>
-                        </div>
-                        
-                        <div className="border rounded-lg p-4">
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="font-medium">500kg de Alumínio</span>
-                            <Badge variant="outline">Troca Direta</Badge>
+                          
+                          <div className="border rounded-lg p-4">
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="font-medium">500kg de Alumínio</span>
+                              <Badge variant="outline">Troca Direta</Badge>
+                            </div>
+                            <p className="text-sm text-gray-600 mb-2">Por: 300kg de Cobre</p>
+                            <p className="text-xs text-gray-500">Metalúrgica XYZ - Rio de Janeiro, RJ</p>
+                            <Button size="sm" className="mt-2 w-full">
+                              Propor Troca
+                            </Button>
                           </div>
-                          <p className="text-sm text-gray-600 mb-2">Por: 300kg de Cobre</p>
-                          <p className="text-xs text-gray-500">Metalúrgica XYZ - Rio de Janeiro, RJ</p>
-                          <Button size="sm" className="mt-2 w-full">
-                            Propor Troca
-                          </Button>
                         </div>
                       </div>
-                    </div>
-                    
-                    <div className="space-y-4">
-                      <h4 className="font-medium">Calculadora de Trocas</h4>
-                      <div className="border rounded-lg p-4 bg-green-50">
-                        <div className="space-y-3">
-                          <div>
-                            <label className="text-sm font-medium">Você oferece:</label>
-                            <p className="text-lg">1 ton de Papel Branco</p>
-                            <p className="text-sm text-gray-600">Valor estimado: R$ 800</p>
-                          </div>
-                          <div className="border-t pt-3">
-                            <label className="text-sm font-medium">Equivale a:</label>
-                            <div className="space-y-1 text-sm">
-                              <p>• 650kg de PET cristal</p>
-                              <p>• 1.2 ton de papelão</p>
-                              <p>• 200kg de alumínio</p>
+                      
+                      <div className="space-y-4">
+                        <h4 className="font-medium">Calculadora de Trocas</h4>
+                        <div className="border rounded-lg p-4 bg-green-50">
+                          <div className="space-y-3">
+                            <div>
+                              <label className="text-sm font-medium">Você oferece:</label>
+                              <p className="text-lg">1 ton de Papel Branco</p>
+                              <p className="text-sm text-gray-600">Valor estimado: R$ 800</p>
+                            </div>
+                            <div className="border-t pt-3">
+                              <label className="text-sm font-medium">Equivale a:</label>
+                              <div className="space-y-1 text-sm">
+                                <p>• 650kg de PET cristal</p>
+                                <p>• 1.2 ton de papelão</p>
+                                <p>• 200kg de alumínio</p>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -381,6 +408,22 @@ const MercadoDigital = () => {
           </Tabs>
         </CardContent>
       </Card>
+
+      <CriarLeilaoModal
+        isOpen={criarLeilaoModal}
+        onClose={() => setCriarLeilaoModal(false)}
+      />
+
+      <FazerLanceModal
+        isOpen={fazerLanceModal}
+        onClose={() => setFazerLanceModal(false)}
+        leilao={leilaoSelecionado}
+      />
+
+      <ProporTrocaModal
+        isOpen={trocarModal}
+        onClose={() => setTrocarModal(false)}
+      />
     </div>
   );
 };

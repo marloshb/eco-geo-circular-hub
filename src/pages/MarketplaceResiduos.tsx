@@ -9,7 +9,7 @@ import Header from '@/components/Header';
 import ListagemResiduos from '@/components/marketplace/ListagemResiduos';
 import MercadoDigital from '@/components/marketplace/MercadoDigital';
 import PrecificacaoDinamica from '@/components/marketplace/PrecificacaoDinamica';
-import GeotecnologiasMarketplace from '@/components/marketplace/GeotecnologiasMarketplace';
+import OtimizacaoRotas from '@/components/marketplace/OtimizacaoRotas';
 
 const MarketplaceResiduos = () => {
   const [activeTab, setActiveTab] = useState('listagem');
@@ -99,7 +99,7 @@ const MarketplaceResiduos = () => {
               </TabsTrigger>
               <TabsTrigger value="geotecnologias" className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span className="hidden md:inline">Geolocalização</span>
+                <span className="hidden md:inline">Otimização</span>
               </TabsTrigger>
             </TabsList>
 
@@ -116,7 +116,7 @@ const MarketplaceResiduos = () => {
             </TabsContent>
 
             <TabsContent value="geotecnologias">
-              <GeotecnologiasMarketplace />
+              <OtimizacaoRotas />
             </TabsContent>
           </Tabs>
         </div>

@@ -1,14 +1,18 @@
-
 import React, { useState } from 'react';
 import { Package, Search, Filter, Upload, Star, MapPin, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import DetalhesResiduoModal from './DetalhesResiduoModal';
+import ListarResiduoModal from './ListarResiduoModal';
 
 const ListagemResiduos = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('todos');
+  const [detalhesModal, setDetalhesModal] = useState(false);
+  const [listarModal, setListarModal] = useState(false);
+  const [residuoSelecionado, setResiduoSelecionado] = useState(null);
 
   const categorias = [
     { id: 'todos', nome: 'Todos', cor: 'bg-gray-100 text-gray-800' },
@@ -86,6 +90,11 @@ const ListagemResiduos = () => {
     return matchCategory && matchSearch;
   });
 
+  const verDetalhes = (residuo: any) => {
+    setResiduoSelecionado(residuo);
+    setDetalhesModal(true);
+  };
+
   return (
     <div className="space-y-6">
       <Card>
@@ -115,7 +124,10 @@ const ListagemResiduos = () => {
                 <Filter className="h-4 w-4" />
                 <span>Filtros Avançados</span>
               </Button>
-              <Button className="bg-green-600 hover:bg-green-700 flex items-center space-x-2">
+              <Button 
+                className="bg-green-600 hover:bg-green-700 flex items-center space-x-2"
+                onClick={() => setListarModal(true)}
+              >
                 <Upload className="h-4 w-4" />
                 <span>Listar Resíduo</span>
               </Button>
@@ -175,7 +187,11 @@ const ListagemResiduos = () => {
                           <p className="text-lg font-bold text-green-600">{residuo.preco}</p>
                           <p className="text-sm text-gray-500">{residuo.quantidade}</p>
                         </div>
-                        <Button size="sm" className="bg-green-600 hover:bg-green-700">
+                        <Button 
+                          size="sm" 
+                          className="bg-green-600 hover:bg-green-700"
+                          onClick={() => verDetalhes(residuo)}
+                        >
                           Ver Detalhes
                         </Button>
                       </div>
@@ -224,3 +240,14 @@ const ListagemResiduos = () => {
 };
 
 export default ListagemResiduos;
+
+<DetalhesResiduoModal
+  isOpen={detalhesModal}
+  onClose={() => setDetalhesModal(false)}
+  residuo={residuoSelecionado}
+/>
+
+<ListarResiduoModal
+  isOpen={listarModal}
+  onClose={() => setListarModal(false)}
+/>
